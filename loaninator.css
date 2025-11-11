@@ -1,0 +1,42 @@
+label {
+    display: block;   /* puts label on its own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    display: block;   /* puts input on its own line */
+    margin-bottom: 15px;
+    width: 250px;     /* optional: makes them same width */
+}
+
+.checkbox {
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    border-style: solid;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px;
+}
+
+.form_container {
+    display: flex;         /* put the two sides next to each other */
+    gap: 20px;             /* space between columns */
+}
+
+.form_left, .form_right {
+    flex: 0 0 auto;        /* auto width to content */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

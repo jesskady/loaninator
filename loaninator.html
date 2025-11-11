@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="loaninator.css">
+        <script type="module" src="./loaninator.js"></script>
+        <h1>THE LOANINATOR</h1>
+        <image src="Heinz_Doofenshmirtz.png"></image>
+    </head>
+    <body>
+        <form id="loan_details_form" class="form_container">
+            <div class="form_left">
+                <label for="loan_amount" id="loan_amount" >Loan Amount</label>
+                <input type="text" name="loan_amount" class="currency">
+
+                <label for="interest_rate">Interest Rate</label>
+                <input type="text" name="interest_rate" class="percent">
+
+                <label for="term">How many years is this loan?</label>
+                <input type="number" name="term">
+
+                <label for="period">What is the payment period?</label>
+                <select name="period" id="period">
+                    <option value="12" selected>Monthly</option>
+                    <option value="3">Quarterly</option>
+                    <option value="1">Yearly</option>
+                </select>
+
+                <label for="start_date">Start Date (If you're in the middle of the loan term, enter today's date.)</label>
+                <input type="date" name="start_date" id="start_date" value="2026-01-01">
+
+                <input type="submit" value="Submit">
+            </div>
+            
+            <div class="form_right">
+                <label for="analysis">Enable Analysis Mode </label>
+                <input type="checkbox" name="analysis" id="analysis" class="checkbox" checked>
+
+                <div id="analysis_fields">
+                    <label for="extra_payment" id="extra_payment" >Would you like to apply a future one-time payment?
+                        <br> Enter the amount:
+                    </label>
+                    <input type="text" name="extra_payment" class="currency">
+    
+                    <label for="extra_payment_index">How many payments in will this extra payment happen?
+                        <br> (For example, for a monthly payment, for a lump sum extra payment in 3 years, enter 36.)
+                    </label>
+                    <input type="number" name="extra_payment_index">
+                </div>
+            </div>
+            
+        </form>
+        <br><br>
+        <div id="loan_list_container"></div>
+        <div id="amortization_container"></div>
+    </body>
+</html>
